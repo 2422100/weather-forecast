@@ -1,0 +1,19 @@
+[project]
+name = "jma-weather"
+version = "0.1.0"
+description = "気象庁（JMA）の天気予報データを取得・表示するアプリケーション"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+]
+
+[project.scripts]
+jma-weather = "jma_weather.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
